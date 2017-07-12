@@ -3,13 +3,13 @@ DROP TABLE If EXISTS artist;
 
 CREATE TABLE artist(
 id SERIAL PRIMARY KEY,
-name VARCHAR(255),
+name VARCHAR(255)
 );
 
 CREATE TABLE album(
 id SERIAL PRIMARY KEY,
 name VARCHAR(255),
 genre VARCHAR(255),
-artist_id INT REFERENCE artist(id)
+artist_id INT REFERENCES artist(id)
 );
 
